@@ -13,6 +13,7 @@ services:
     container_name: "api-smart-env"
     environment:
       MONGO_URI: "mongodb://station:b268iaTJ@mongo:27017/vigilante?authSource=admin"
+      DB_NAME: "vigilante"
     ports:
       - "8000:8000"
     depends_on:
