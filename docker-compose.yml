@@ -1,0 +1,18 @@
+services:
+  mongo-db:
+    image: mongo:6.0
+    container_name: "db-smart-env"
+    networks:
+      - smart-env-network
+  api:
+    build: ./app
+    container_name: "api-smart-env"
+    ports:
+      - "8000:8000"
+    depends_on:
+      - mongo-db
+    networks:
+      - smart-env-network
+networks:
+  smart-env-network:
+    driver: bridge
