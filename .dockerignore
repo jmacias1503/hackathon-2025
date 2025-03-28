@@ -1,0 +1,32 @@
+# Ignorar todo por defecto
+*
+
+# Excepciones (no ignorar estos)
+!/.dockerignore
+!/Dockerfile
+!/app/
+!/requirements.txt
+!/pyproject.toml  # Si usas Poetry
+!/Pipfile*        # Si usas Pipenv
+!/.env            # Solo para desarrollo, en producción usa variables seguras
+
+# Ignorar específicos
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+**/.DS_Store
+**/.venv
+**/venv
+**/env
+**/.env
+**/.git
+**/.gitignore
+**/.vscode
+**/.idea
+**/*.log
+**/*.sqlite3
+**/tests
+**/local_*
+**/docker-compose.yml
+**/docker-compose.*.yml
