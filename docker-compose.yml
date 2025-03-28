@@ -2,6 +2,10 @@ services:
   db-smart-env:
     image: mongo:6.0
     container_name: "db-smart-env"
+    environment:
+      - MONGO_INITDB_ROOT_USERNAME=station
+      - MONGO_INITDB_ROOT_PASSWORD=b268iaTJ
+      - MONGO_INITDB_DATABASE=vigilante
     networks:
       - smart-env-network
   api:
